@@ -1,3 +1,23 @@
+学习概要： 
+  1） 使用react-redux，学习使用容器组件和UI组件；见routes/header 和 routes/side；
+    connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(Header);
+
+  2） 单纯使用redux(不是react-redux库)，见 redux_only_demo, routes/header/View.js；
+  步骤：
+    store.dispatch(actions(3));
+    store.subscribe();
+    store.getState();
+  3） 使用hooks编写组件，用上redux；见 routes/hooks_demo
+    要点： 使用 useSelector, useDispatch
+            
+        import { useSelector, useDispatch } from 'react-redux';
+        const count = useSelector(store => store.num1.num);
+        const dispatch = useDispatch();
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
